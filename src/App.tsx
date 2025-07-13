@@ -122,7 +122,7 @@ function App() {
         .filter(Boolean);
       citiesArray.forEach(city => params.append('cities', city));
 
-      const response = await fetch(`https://navodisha-college-search-backend2.vercel.app/api/colleges?${params.toString()}`, {
+      const response = await fetch(`https://navodisha-college-search-1.onrender.com/api/colleges?${params.toString()}`, {
       method: 'GET',
       credentials: 'include' // This is crucial when using cookies/auth from a different origin
       });
