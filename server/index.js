@@ -5,7 +5,11 @@ import { MongoClient } from 'mongodb';
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
+app.use(cors({
+  origin: ["https://navodisha-college-search-beta.vercel.app"],
+  methods: ['POST', 'GET'],
+  credentials: true
+}));
 app.use(express.json());
 
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://pranaybhandekar8841:91uCwgf0QNxySBXW@cluster0.7pqdzji.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
