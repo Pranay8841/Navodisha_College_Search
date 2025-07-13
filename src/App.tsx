@@ -122,7 +122,7 @@ function App() {
         .filter(Boolean);
       citiesArray.forEach(city => params.append('cities', city));
 
-      const response = await fetch(`/api/colleges?${params.toString()}`);
+      const response = await fetch(`https://navodisha-college-search-backend2.vercel.app/api/colleges?${params.toString()}`);
       if (!response.ok) throw new Error('Failed to fetch colleges');
       const data = await response.json();
       setResults(data);
